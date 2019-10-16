@@ -1,0 +1,24 @@
+
+let line1 = 12000;
+let line2 = line1*1.2;
+let line3 = (line1+line2)/2;
+let line4 = line3;
+let emc1 = 128;
+let emc2 = emc1/2;
+let emc3 = emc2/2;
+let emc4 = emc3/2;
+
+function ves(dlina,emcost) 
+{
+return dlina/100*emcost*200/1000
+}
+
+let ves1 = ves(line1,emc1);
+let ves2 = ves(line2,emc2);
+let ves3 = ves(line3,emc3);
+let ves4 = ves(line4,emc4);
+
+if (ves1>ves2 && ves1>ves3 && ves1>ves4) {alert ('Cамая тяжёлая линия 1 имеет общий вес'+ves1+' kg, а сто метров используемого кабеля весят'+ves1/line1*100+' kg');}
+else if (ves2>ves1 && ves2>ves3 && ves2>ves4) {alert ('Cамая тяжёлая линия 2 имеет общий вес'+ves2+' kg, а сто метров используемого кабеля весят'+ves2/line2*100+' kg');}
+else if (ves3>ves1 && ves3>ves2 && ves3>ves4) {alert ('Cамая тяжёлая линия 3 имеет общий вес'+ves3+' kg, а сто метров используемого кабеля весят'+ves3/line3*100+' kg');}
+else {alert ('Cамая тяжёлая линия 4 имеет общий вес'+ves4+' kg, а сто метров используемого кабеля весят'+ves4/line4*100+' kg');}
